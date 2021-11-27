@@ -1,13 +1,12 @@
 // Make connection
-var PORT = process.env.PORT || 4000;
-var socket = io.connect(`http://localhost:${PORT}`);
+var socket = io(); //.connect(`http://localhost:${PORT}`);
 
 // Query DOM
 var message = document.getElementById('message'),
-      handle = document.getElementById('handle'),
-      btn = document.getElementById('send'),
-      output = document.getElementById('output'),
-      feedback = document.getElementById('feedback');
+    handle = document.getElementById('handle'),
+    btn = document.getElementById('send'),
+    output = document.getElementById('output'),
+    feedback = document.getElementById('feedback');
 
 // Emit events
 btn.addEventListener('click', function(){
